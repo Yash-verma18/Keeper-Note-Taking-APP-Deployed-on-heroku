@@ -1,0 +1,24 @@
+{
+  "name": "keeper",
+  "version": "1.0.0",
+  "description": "Keeper-app",
+  "main": "server.js",
+  "author": "Yash Verma",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "server": "nodemon server.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27"
+  }
+}
+
+
