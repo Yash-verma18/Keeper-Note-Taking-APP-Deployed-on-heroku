@@ -19,7 +19,7 @@ function CreateArea(props) {
   };
   const submitNote = async () => {
     try {
-      await axios.post("https://jotting-keeper.herokuapp.com/keeper/notes", {
+      await axios.post("/keeper/notes", {
         title: note.title,
         content: note.content,
       });

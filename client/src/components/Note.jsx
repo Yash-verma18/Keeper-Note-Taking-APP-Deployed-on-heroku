@@ -19,9 +19,7 @@ function Note({ id, title, content, getNotes, date }) {
   const deleteNote = async (e, p) => {
     e.preventDefault();
     try {
-      let response = await axios.delete(
-        `https://jotting-keeper.herokuapp.com/keeper/notes/${id}`
-      );
+      let response = await axios.delete(`/keeper/notes/${id}`);
       console.log("deleted", response.data);
       getNotes();
     } catch (err) {

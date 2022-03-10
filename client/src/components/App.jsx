@@ -12,9 +12,7 @@ function App() {
   //get notes
   const getNotes = async () => {
     try {
-      const response = await fetch(
-        "https://jotting-keeper.herokuapp.com/keeper/notes"
-      );
+      const response = await fetch("/keeper/notes");
       const data = await response.json();
       setNotes(data);
     } catch (error) {
