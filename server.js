@@ -29,12 +29,12 @@ mongoose.connect(
 //   );
 // }
 
-// Accessing the path module
+// Accessing the path module : for heroku deployement
 const path = require("path");
 
-// Step 1:
+// Step 1: for heroku deployement
 app.use(express.static(path.resolve(__dirname, "./client/build")));
-// Step 2:
+// Step 2: for heroku deployement
 app.get("*", function (request, response) {
   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });

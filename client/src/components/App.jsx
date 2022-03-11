@@ -19,6 +19,7 @@ function App() {
       console.log(error.message);
     }
   };
+
   return (
     <div>
       <Header />
